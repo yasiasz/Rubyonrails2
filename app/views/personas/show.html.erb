@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @persona.nombre %>
+</p>
+
+<p>
+  <strong>Apellido:</strong>
+  <%= @persona.apellido %>
+</p>
+
+<p>
+  <strong>Direccion:</strong>
+  <%= @persona.direccion %>
+</p>
+<%=image_tag "https://maps.googleapis.com/maps/api/staticmap?center=#{@person.latitude},#{@person.longitude}&zoom=17&size=600x300&maptype=roadmap%20&markers=color:blue%7Clabel:S%7C#{@person.latitude},#{@person.longitude}&key=LALLVE"%>
+
+<%= link_to 'Edit', edit_persona_path(@persona) %> |
+<%= link_to 'Back', personas_path %>
